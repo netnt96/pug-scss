@@ -1,0 +1,15 @@
+
+mixin card({href, img, title, badge, paraghrap})
+    .card.card-page(class= img ? '' : 'disabled' )
+        a(href= href ? href : "#")
+            .card__img(class= img ? '' : 'card__img-waiting' )
+                if img 
+                    img.img-fluid(src= img, alt="img-page")
+                else
+                    span.icon-waiting 
+                        i(class="far fa-clock")
+            .card__body
+                h4.card__title= title
+                    if badge
+                        span.card__badge= badge
+                p.card__paraghrap= paraghrap

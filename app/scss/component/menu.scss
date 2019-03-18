@@ -1,0 +1,121 @@
+
+.main-menu {
+    >li>a {
+        color: #fff;
+    }
+    &__item {
+        float: left;
+        text-transform: uppercase;
+        &:hover,
+        &--active {
+            > a {
+                color: $cl-light-yellow;
+            }
+        }
+
+        &--has-children {
+            position: relative;
+            > a {
+              &::after {
+                content: '\f078';
+                font-family: 'Font Awesome 5 Free';
+                font-size: 9px;
+                text-align: right;
+                position: absolute;
+                right: 11px;
+                top: 50%;
+                transform: translateY(-50%);
+              }
+            }
+        }
+
+    }
+
+    &__link {
+        font-weight: 700;
+        padding: 1rem 1.35rem;
+        display: block;
+        position: relative;
+        font-size: 0.78rem;
+        transition: background-color .1s;
+        letter-spacing: 0.5px;     
+    }
+    >li {
+        position: relative;
+    }
+
+    .sub-menu {
+        padding: 15px 0;
+        // border-bottom: 1px solid $cl-gray;
+        display: none;
+        width: 200px;
+        position: absolute;
+
+        >li {
+            float: none;
+            // display: none; 
+            // border-bottom: 1px solid $cl-gray;
+            color: #212529;
+            
+            >a {
+                padding: 12px 22px;
+                font-weight: 700;
+                font-size: 0.67rem;
+                border-top: 1px solid rgba(0,0,0,.1);
+                background-color: $cl-white;
+                letter-spacing: 0.5px;
+                // position: relative;
+            }
+
+            &:hover >a {
+                transition: background-color .1s;
+                color: #212529;
+                background-color: #f8f9fa;
+            }
+
+        }
+        
+        >&__item--has-children {
+            position: relative;
+            > a {
+              &::after {
+                content: '\f105';
+                font-family: 'Font Awesome 5 Free';
+                font-size: 9px;
+                text-align: right;
+                position: absolute;
+                right: 11px;
+                top: 50%;
+                transform: translateY(-50%);
+                }
+            }
+        }
+
+        .child-menu {
+            position: absolute;
+            top: 56px;
+            right: -182px;
+            width: 180px;
+            display: none;
+
+            >li {
+                float: none;
+                >a {
+                    padding: 12px 22px;
+                    font-weight: 700;
+                    font-size: 0.67rem;
+                    border-top: 1px solid rgba(0,0,0,.1);
+                    background-color: $cl-white;
+                    letter-spacing: 0.5px;
+                }
+    
+                &:hover >a {
+                    transition: background-color .1s;
+                    color: #212529;
+                    background-color: #f8f9fa;
+                }
+
+            }
+        }
+    }
+}

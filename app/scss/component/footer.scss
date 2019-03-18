@@ -1,0 +1,32 @@
+footer.footer {
+    background-color: #343a40;
+    .row {
+        justify-content: space-between;
+
+        .menu-footer {
+            display: flex;
+            
+            li {
+                margin-right: 0.5rem;
+                a {
+                    color: #fff;
+                }
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+             
+        }
+
+        .copy-right {
+            padding: 1rem 0;
+            font-size: 86.666%;
+            font-weight: 400;
+            color: hsla(0,0%,100%,.65);
+        }
+
+        .social a{
+            color: #f5ba4b;
+        }
+    }
+}

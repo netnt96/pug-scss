@@ -1,0 +1,49 @@
+
+header.sticky {
+    position:fixed;
+    top:0;
+    background: #fff;
+    transition: all 0.3s ease-in-out;
+
+    .social li a {
+        color: #000;
+    }
+    .main-menu__link {
+        color: #212529;
+    }
+}
+
+.header{
+    padding: 1.25rem 1rem;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    position:absolute;
+
+    .wp-header {
+        display: flex;
+        justify-content: space-between;
+        
+        #logo {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            }
+        }
+    }
+
+    .social {
+        li {
+            float: left;
+            padding: 1rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            a{color: #fff;}
+
+            &:hover a{
+                color: #f5ba4b;
+            }
+        }
+    }
+
+
+

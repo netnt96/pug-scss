@@ -1,0 +1,196 @@
+mixin content()
+
+    // secton page list
+    -
+        var pagesListFirst = [
+            {img: "images/landing-page-1.png", title: "App landing", paraghrap: "You can use this page to promote your web or mobile application."},
+            {img: "images/landing-page-2.png", title: "Company landing", badge: "New!", paraghrap: "You can use this page to promote your company."},
+            {img: "images/landing-page-3.png", title: "Fullpage scrolling", paraghrap: "A landing page created with fullscreen scrolling sections."},
+            {img: "images/landing-page-4.png", title: "Product landing", paraghrap: "You can use this page to promote your product or a store."},
+            {img: "images/landing-page-5.png", title: "Real estate landing", paraghrap: "Y'You can use this page to promote your real estate."},
+            {img: "images/landing-page-6.png", title: "Restaurant landing",badge:"New!", paraghrap: "You can use this page to promote your restaurant."},
+            {img: "images/landing-page-7.png", title: "Service landing", paraghrap: "You can use this page to promote your web or mobile application."},
+            {title: "Coming soon", paraghrap: "You can use this page to promote your web or mobile application."}
+        ]
+
+    section.section.page-list
+        .container
+            .section__header
+                h2.section__header__title Landing page variants
+                p.section__header__paraghrap Incline comes with several professionally designed landing pages that can be easily adapted for any project.
+            .section__body
+                .row
+                    each item in pagesListFirst 
+                        .col-4
+                            +card({href: item.href, img: item.img, title: item.title, badge:item.badge,paraghrap : item.paraghrap})
+                
+
+
+    //section header-variants
+    -
+        var pagesListSecond = [
+            {img: "images/51.png", title: "Carousel header", paraghrap: "Switch between multiple slides with full cover background images."},
+            {img: "images/52.png", title: "Parallax header", badge: "New!", paraghrap: "Good old parallax effect to add even more visual interest to your page."},
+            {img: "images/53.png", title: "Video header", paraghrap: "Local video background you can optionally loop if needed."},
+        ]                 
+    
+    section.section.header-variants
+        .line.line-top
+        .container
+            .section__header
+                h2.section__header__title Header variants
+                p.section__header__paraghrap Polish your landing page with one of the header options below to impress your visitors at first glance.
+            .section__body
+                .row
+                    each item in pagesListSecond 
+                        .col-4
+                            +card({href: item.href, img: item.img, title: item.title, badge:item.badge,paraghrap : item.paraghrap})
+                                  
+    //quote
+    section.section.wp-quote
+        .container
+            .quote
+                blockquote.quote__blockquote
+                    p.quote__blockquote__content This theme is a Swiss Army knife of Bootstrap themes. Built with components in mind, it can be easily adjusted to create layouts of any complexity within a few minutes.
+                    footer.quote__blockquote__footer 
+                        span Yuri Gamin, Moscow
+
+    //feautures
+    section.section.features
+        .container
+            .section__header
+                h2.section__header__title Key theme features
+                p.section__header__paraghrap Incline can be used to create anything from a small marketing page to a sophisticated website.
+            .section__body
+                .row
+                    .col-4
+                        .widget
+                            .widget__icon
+                                span 
+                                    +icon-fonts("fas fa-desktop")
+                            h4.widget__title Fully responsive
+                            p.widget__paraghrap Looks great on all major browsers, tablets and mobile devices.
+                    
+                    .col-4
+                        .widget
+                            .widget__icon
+                                span 
+                                    +icon-fonts("fas fa-shield-alt")
+                            h4.widget__title Built with SASS
+                            p.widget__paraghrap Easily adjustable with tons of SASS variables included.
+                    
+                    .col-4
+                        .widget
+                            .widget__icon
+                                span 
+                                    +icon-fonts("fas fa-headset")
+                            h4.widget__title Free support
+                            p.widget__paraghrap Feel free to contact us with any feature requests or bug reports.
+
+    //about
+
+    section.section.about
+        .container 
+            .row
+                .col-6
+                    .wrap-box
+                        h3.section__title Intuitive workflow
+                        ul.section__list
+                            li
+                                a(href="#") Speed up your development process with Gulp and BrowserSync live browser reload
+                            li 
+                                a(href="#") Easily adjust the look of any component with tons of additional SASS variables included
+                            li 
+                                a(href="#") Easily make global changes with HTML file @@includes
+
+                        +button-link({text: "Documentation"})
+
+                .col-5
+                    .img-effect
+                        img.img-fluid(src="images/47.jpg", alt="img")
+    
+    //services
+    section.section.services
+        .container
+            .section__header
+                h2.section__header__title Ultimate solution
+                p.section__header__paraghrap Easily create a website of any complexity with dozens of pages and independent components for any purpose.
+            .section__body
+                .row 
+                    .col-4
+                        .card.card-services
+                            img.img-fluid(src="images/services-2.jpg", alt="")
+                            .bg-overlay
+                            .card__body
+                                .card__icon
+                                    span
+                                        +icon-fonts("fas fa-layer-group")
+                                h4.card__title Support pages
+                                p.card__paraghrap Finish off your website with multiple support pages included into the package.
+                    .col-4
+                        .card.card-services.card-second
+                            img.img-fluid(src="images/services-1.jpg", alt="")
+                            .bg-overlay
+                            .card__body
+                                .card__icon
+                                    span
+                                        +icon-fonts("far fa-check-circle")
+                                h4.card__title Support pages
+                                p.card__paraghrap Finish off your website with multiple support pages included into the package.
+                    
+                    .col-4
+                        .card.card-services
+                            img.img-fluid(src="images/services-2.jpg", alt="")
+                            .bg-overlay
+                            .card__body
+                                .card__icon
+                                    span
+                                        +icon-fonts("fas fa-puzzle-piece")
+                                h4.card__title Support pages
+                                p.card__paraghrap Finish off your website with multiple support pages included into the package.
+                    
+                  
+    //pricing                 
+    section.section.pricing
+        .container
+            .section__header
+                h2.section__header__title Pricing options
+                p.section__header__paraghrap Secure payment via Stripe or Paypal. 100% money back guarantee.
+            .section__body
+                .row 
+                    .col-4
+                        .card.card-pricing.card-active
+                            .card__body
+                                h4.card__title Standard license
+                                .price
+                                    span $
+                                    span 49.00
+                                ul.card__list
+                                    li Use for a single product
+                                    li Non-paying users only
+                                    li Read 
+                                        a(href="#") full description
+                                +button-link({text: "Purchase now"})
+                    .col-4
+                        .card.card-pricing
+                            .card__body
+                                h4.card__title Standard license
+                                .price
+                                    span $
+                                    span 49.00
+                                ul.card__list
+                                    li Use for a single product
+                                    li Paying users allowed
+                                    li Read 
+                                        a(href="#") full description
+                                +button-link({text: "Purchase now"})
+                   
+    section.section.download
+        .container
+            .row
+                .col-8
+                    h3.section__title Download it from the Bootstrap marketplace
+                    p.section__paraghrap Each theme featured at the Bootstrap marketplace has been reviewed by Bootstrap's creators. Six month technical support by the theme author is provid
+                
+                .col-2
+                    +button-link({text: "Purchase now"})

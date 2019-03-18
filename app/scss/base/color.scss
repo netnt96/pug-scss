@@ -1,0 +1,21 @@
+
+$cl-light-yellow : #f5ba4b;
+$cl-white: #fff;
+$cl-gray: #6c757d;
+$cl-black: #212529;
+
+.color {
+    &--cl-light-yellow{
+        color: $cl-light-yellow;
+    }
+    &--cl-white{
+        color: $cl-white;
+    }
+    &--cl-gray{
+        color:$cl-gray;
+    }
+    &--cl-black{
+        color: $cl-black;
+    }
+}
+

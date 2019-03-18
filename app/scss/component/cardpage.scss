@@ -1,0 +1,57 @@
+%card{
+    .disabled {
+        pointer-events: none;
+        opacity: .5;
+    }
+    .card{
+        .card__img-waiting {
+            position: relative;
+            transition: all .2s ease-in-out;
+            background-color: #ced4da;
+            height: 214px;
+    
+            .icon-waiting {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                color: #6c757d;
+                font-size: 2rem;
+            }
+        }
+        .card__body {
+            padding: 2.5rem 2rem;
+    
+            .card__title {
+                margin-bottom: 1rem;
+                font-weight: 600;
+                font-size: 1.2rem;
+    
+                .card__badge {
+                    margin-left: 5px;
+                    color: #fff;
+                    background-color: #dc3545;
+                    font-size: 75%;
+                    font-weight: 600;
+                    line-height: 1;
+                    display: inline-block;
+                    padding: .25em .4em;
+                    text-align: center;
+                }
+            }
+    
+            .card__paraghrap {
+                color: #6c757d;
+            }
+        }
+       
+        img {
+            transition: all 0.5s;
+        }
+        &:hover img {
+            transition: all 0.4s;
+            box-shadow: 0 1rem 2rem -1rem rgba(0,0,0,.75);
+            transform: translateY(-6px);
+        }
+    }
+}

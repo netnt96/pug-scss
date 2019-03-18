@@ -1,0 +1,23 @@
+mixin footer()
+    footer.section.footer
+        .container
+            .row
+                .logo-footer
+                    a(href="#")
+                        img(src="images/logo.png", alt="logo")
+                
+                ul.menu-footer
+                    -var menu = [{title: 'Terms and conditions'},{title:'Privacy policy'},{title:'Contact us'}]
+                    each item in menu
+                        li 
+                            a(href= item.href ? item.href : "#" )= item.title    
+
+            .row
+                .copy-right
+                    p
+                        span
+                            +icon-fonts("far fa-copyright")
+                        span Copyright 2019 Simpleqode. All rights reserved.
+                
+                +social()
+

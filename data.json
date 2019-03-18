@@ -1,0 +1,112 @@
+{
+    "menus":{
+        "1":{
+            "title": "Welcome",
+            "submenu":{
+                "1": {
+                    "title": "Heade:Image"
+                },
+                "2": {
+                    "title": "Header:Carousel"
+                },
+                "3": {
+                    "title": "Header:Paralla"
+                },
+                "4": {
+                    "title": "Header:Carousel"
+                },
+                "5": {
+                    "title": "Header:video"              
+                }
+            }
+        }, 
+        "2":{
+            "title": "Landings",
+            "submenu":{
+                "1": {
+                    "title": "app"
+                },
+                "2": {
+                    "title": "company"
+                },
+                "3": {
+                    "title": "fullpage"
+                },
+                "4": {
+                    "title": "product"
+                },
+                "5": {
+                    "title": "real estate"              
+                },
+                "6": {
+                    "title": "restaurant"
+                },
+                "7": {
+                    "title": "service"
+                }
+               
+            }
+        },
+        "3":{
+            "title": "Pages",
+            "submenu":{
+                "1": {
+                    "title": "blog", 
+                    "childmenu":{
+                        "1": {
+                            "title": "blog"
+                        },
+                        "2": {
+                            "title": "company"
+                        }
+                    }
+
+                },
+                "2": {
+                    "title": "shop",
+                    "childmenu": {
+                        "1": {
+                            "title": "shop"
+                        },
+                        "2": {
+                            "title": "company"
+                        },
+                        "3": {
+                            "title": "fullpage"
+                        },
+                        "4": {
+                            "title": "product"
+                        }
+                    }
+                },
+                "3": {
+                    "title": "about"
+                },
+                "4": {
+                    "title": "contact"
+                },
+                "5": {
+                    "title": "faq"              
+                }
+            }
+        },
+        "4":{
+            "title": "Components",
+            "submenu":{
+                "1": {
+                    "title": "theme"
+                },
+                "2": {
+                    "title": "bootstrap"
+                }
+            }
+        },
+        "5":{
+            "title": "Documentation"
+            
+        },
+        "6":{
+            "title": "Purchase Now"
+        }
+    }
+}
