@@ -1,6 +1,6 @@
 -
   var menus = [
-    { title: "Welcome", submenu: [{title: 'Header:Image'}, {title:'Header:Carousel'}, {title: 'Header:Parallax'}, {title:'Header:video'}], active: true},
+    { title: "Welcome", submenu: [{title: 'Header:Image', active: true}, {title:'Header:Carousel'}, {title: 'Header:Parallax'}, {title:'Header:video'}], active: true},
     { title: "Landings", submenu: [{title: 'app'}, {title:'company'}, {title:'fullpage'}, {title:'product'}, {title:'real estate'}] },
     { title: "Support", submenu: [{title: 'blog', childmenu: [{title: 'blog'}, {title:'blog-post'}]}, {title:'shop',childmenu: [{title: 'shop'}, {title:'shop-item'}, {title:'shop-cart'}]}, {title:'about'}, {title:'contact'}, {title:'faq'}]},
     { title: "Components", submenu: [{title: 'theme'}, {title:'bootstrap'}]},
@@ -18,7 +18,7 @@ mixin main-menu()
                         ul.sub-menu.js-submenu
                             each sub in item.submenu
                                 li.main-menu__item.js-sub-item(class=sub.childmenu ? 'sub-menu__item--has-children' : '', class= sub.active ? 'main-menu__item--active' : '')
-                                    a.main-menu__link(href= href ? href : "#")= sub.title
+                                    a.main-menu__link.js-sub-link(href= href ? href : "#")= sub.title
                                     if sub.childmenu
                                         ul.child-menu.js-chilmenu
                                             each child in sub.childmenu

@@ -106,7 +106,7 @@ header.sticky {
     color: #212529; }
 
 .header {
-  padding: 1.25rem 1rem;
+  padding: 0 1rem;
   top: 0;
   z-index: 2;
   width: 100%;
@@ -117,6 +117,15 @@ header.sticky {
     .header .wp-header #logo {
       padding-top: 0.5rem;
       padding-bottom: 0.5rem; }
+  .header .border-bottom {
+    padding: 1.25rem 0;
+    border-bottom: 1px solid #fbf7f930; }
+  .header .social::before {
+    content: "|";
+    position: absolute;
+    top: 33%;
+    left: 18%;
+    color: #99acbdad; }
 
 .social li {
   float: left;
@@ -128,9 +137,6 @@ header.sticky {
   .social li:hover a {
     color: #f5ba4b; }
 
-.main-menu > li > a {
-  color: #fff; }
-
 .main-menu__item {
   float: left;
   text-transform: uppercase; }
@@ -141,10 +147,10 @@ header.sticky {
     .main-menu__item--has-children > a::after {
       content: '\f078';
       font-family: 'Font Awesome 5 Free';
-      font-size: 9px;
+      font-size: 7px;
       text-align: right;
       position: absolute;
-      right: 11px;
+      right: 9px;
       top: 50%;
       transform: translateY(-50%); }
 
@@ -155,33 +161,38 @@ header.sticky {
   position: relative;
   font-size: 0.78rem;
   transition: background-color .1s;
-  letter-spacing: 0.5px; }
+  letter-spacing: 0.5px;
+  color: #fff; }
 
 .main-menu > li {
   position: relative; }
 
 .main-menu .sub-menu {
-  padding: 15px 0;
-  display: none;
   width: 200px;
-  position: absolute; }
+  position: absolute;
+  top: 110%;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  display: none; }
   .main-menu .sub-menu > li {
     float: none;
-    color: #212529; }
+    color: #212529;
+    position: relative; }
     .main-menu .sub-menu > li > a {
       padding: 12px 22px;
       font-weight: 700;
       font-size: 0.67rem;
       border-top: 1px solid rgba(0, 0, 0, 0.1);
       background-color: #fff;
-      letter-spacing: 0.5px; }
+      letter-spacing: 0.5px;
+      color: #000; }
     .main-menu .sub-menu > li:hover > a {
       transition: background-color .1s;
       color: #212529;
       background-color: #f8f9fa; }
-  > .main-menu .sub-menu__item--has-children {
+  .main-menu .sub-menu__item--has-children {
     position: relative; }
-    > .main-menu .sub-menu__item--has-children > a::after {
+    .main-menu .sub-menu__item--has-children > a::after {
       content: '\f105';
       font-family: 'Font Awesome 5 Free';
       font-size: 9px;
@@ -192,7 +203,7 @@ header.sticky {
       transform: translateY(-50%); }
   .main-menu .sub-menu .child-menu {
     position: absolute;
-    top: 56px;
+    top: 0px;
     right: -182px;
     width: 180px;
     display: none; }
@@ -204,11 +215,18 @@ header.sticky {
         font-size: 0.67rem;
         border-top: 1px solid rgba(0, 0, 0, 0.1);
         background-color: #fff;
-        letter-spacing: 0.5px; }
+        letter-spacing: 0.5px;
+        color: #212529; }
       .main-menu .sub-menu .child-menu > li:hover > a {
         transition: background-color .1s;
         color: #212529;
         background-color: #f8f9fa; }
+
+.main-menu > li:last-child::before {
+  content: "|";
+  position: absolute;
+  top: 21%;
+  color: #99acbdad; }
 
 .banner {
   background-image: url(../images/banner.jpg);
@@ -217,7 +235,7 @@ header.sticky {
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
-  min-height: 598px;
+  min-height: 670px;
   position: relative; }
   .banner .banner-caption {
     text-align: center;
@@ -256,7 +274,7 @@ header.sticky {
     height: 100%;
     display: block;
     z-index: 0;
-    background-color: rgba(41, 38, 34, 0.5); }
+    background-color: rgba(43, 40, 36, 0.58); }
 
 .page-list .disabled, .header-variants .disabled {
   pointer-events: none;

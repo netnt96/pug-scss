@@ -14,7 +14,7 @@ header.sticky {
 }
 
 .header{
-    padding: 1.25rem 1rem;
+    padding: 0 1rem;
     top: 0;
     z-index: 2;
     width: 100%;
@@ -27,23 +27,40 @@ header.sticky {
         #logo {
             padding-top: 0.5rem;
             padding-bottom: 0.5rem;
-            }
         }
+    }
+
+    .border-bottom {
+        padding: 1.25rem 0;
+        border-bottom: 1px solid #fbf7f930;
     }
 
     .social {
-        li {
-            float: left;
-            padding: 1rem;
-            font-size: 0.75rem;
-            cursor: pointer;
-            a{color: #fff;}
-
-            &:hover a{
-                color: #f5ba4b;
-            }
+        &::before {
+            content: "|";
+            position: absolute;
+            top: 33%;
+            left: 18%;
+            color: #99acbdad;
         }
     }
+}
+
+
+
+.social {
+    li {
+        float: left;
+        padding: 1rem;
+        font-size: 0.75rem;
+        cursor: pointer;
+        a{color: #fff;}
+
+        &:hover a{
+            color: #f5ba4b;
+        }
+    }
+}
 
 
 
